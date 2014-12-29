@@ -1,0 +1,107 @@
+html(lang='es')
+  head
+    title=TitlePage
+    meta(charset='utf-8')
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+    link(rel ='stylesheet', href = 'css/style.css')
+    block head
+    script(src = 'javascript/vendor/modernizr.js')
+    script.
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-18665219-19']);
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })(); 
+  body
+    <!-- Google Tag Manager -->
+    noscript                                            
+      iframe(src="//www.googletagmanager.com/ns.html?id=GTM-5BR8J9", height="0", width="0", style="display:none;visibility:hidden")
+    
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5BR8J9');
+    <!-- End Google Tag Manager -->
+
+    block content
+    script(src = 'javascript/vendor/jquery.min.js')
+    | <!--[if gt IE 9]> <script src="javascript/vendor/parallax.js"></script><![endif]--> 
+    | <!--[if !IE]><!--><script src="javascript/vendor/parallax.js"></script><![endif]-->
+    | <script src="javascript/vendor/jquery.validate.min.js"></script>
+    | <script src="javascript/vendor/jquery.filter_input.js"> </script>
+    | <script src="javascript/application.js"></script>
+    block bottom
+
+    .container
+    .parent      
+      .escene.bienvenida
+        section.animation#scene(data-calibrate-x='true', data-calibrate-y="true", data-invert-x="false", data-invert-y="false", data-limit-x="true", data-limit-y="3", data-scalar-x="22", data-scalar-y="10", data-friction-x="0.1", data-friction-y="0.1", data-origin-x="1.0", data-origin-y="15")
+          .cielovacio#clea(data-calibrate-x='true', data-calibrate-y="true", data-invert-x="false", data-invert-y="true", data-limit-x="true", data-limit-y="true", data-scalar-x="22", data-scalar-y="10", data-friction-x="0.1", data-friction-y="0.2", data-origin-x="1.4", data-origin-y="1.5")
+            .cloud01.layer.expand-width(data-depth='0.70')
+            .cloud02.layer.expand-width(data-depth='0.20')
+            .cloud03.layer.expand-width(data-depth='0.50')
+            .cloud04.layer.expand-width(data-depth='0.80') 
+          .shadow01.layer.expand-width(data-depth='0.60')      
+          .home.layer.expand-width(data-depth='0.40')    
+        section.content
+            .texto-1        
+              h1 ¡Estás a 5 pasos de tu próximo viaje!
+              p.parrafo-1 Dale clic a 
+                strong Inicio 
+                | participa del sorteo de 
+                strong 1 paquete doble 
+                br
+                strong a la Riviera Maya, México.
+
+            .logo-movistar
+            .personas            
+            .avion
+              .boton
+                a.boton-inicio(href="#", title="Iniciar", data-optional="success", onclick="dataLayer.push({'event': 'gaCons-inicio'});")
+                  
+            //.redes
+              ul.follow
+                li.twitter
+                  a(href='#')
+                    img(src="images/twitter.png")
+                li.facebook
+                  a(href='#')
+                    img(src="images/facebook.png")
+            p.legal MIN - verififf
+            
+      .escene.paso-1
+        
+      .escene.paso-2
+        
+      .escene.paso-3
+        
+      .escene.paso-4
+
+      .escene.ya-registrado
+        
+      .loader 
+        img(src="images/loading_n.gif" width="50" heigh="50")
+
+block bottom
+  | <!--[if !IE]><!-->
+  | <script>
+  | var dispositivo = navigator.userAgent.toLowerCase();
+  |  if( dispositivo.search(/iphone|ipod|ipad|android/) > -1 ){
+  |   $('');  }
+  |  else{ 
+  |  var scene = document.getElementById('scene');
+  |  var parallax = new Parallax(scene)
+  |  var clea = document.getElementById('clea');
+  |  var parallax = new Parallax(clea) }
+  |</script>
+  |<![endif]-->
+  script.
+    dataLayer.push({'event': 'gaCons-paso1'});
