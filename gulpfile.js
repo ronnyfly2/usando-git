@@ -3,6 +3,7 @@ var gulp = require('gulp'),
 	stylus = require('gulp-stylus'),
 	nib = require('nib'),
 	gutil = require('gulp-util'),
+	coffee = require('gulp-coffee'),
 	browserSync = require('browser-sync'),	
 	reload = browserSync.reload;
 
@@ -22,10 +23,17 @@ gulp.task('stylus', function () {
 	.pipe(reload({stream:true}));
 });
 
+gulp.task('coffee', function () {
+    return gulp.src('coffee/*.coffee')
+        .pipe(coffee())
+        .pipe(gulp.dest('./js'))
+        .pipe(reload({stream:true}));
+});
+
 
 // js
 gulp.task('js', function () {
-	return gulp.src('js/*js')
+	return gulp.src('js/*.js')
 	.pipe(browserSync.reload({stream:true}));
 });
 
